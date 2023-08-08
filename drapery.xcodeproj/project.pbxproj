@@ -11,6 +11,10 @@
 		52A33BA12A8268E500F91414 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BA02A8268E500F91414 /* ContentView.swift */; };
 		52A33BA32A8268E600F91414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A33BA22A8268E600F91414 /* Assets.xcassets */; };
 		52A33BA62A8268E600F91414 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A33BA52A8268E600F91414 /* Preview Assets.xcassets */; };
+		52A33BB12A826FE200F91414 /* WindowQuoteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BAF2A826FE200F91414 /* WindowQuoteModel.xcdatamodeld */; };
+		52A33BB32A82720500F91414 /* WindowQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BB22A82720500F91414 /* WindowQuote.swift */; };
+		52A33BB72A82766B00F91414 /* QuotesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BB62A82766B00F91414 /* QuotesProvider.swift */; };
+		52A33BBB2A827B3200F91414 /* QuoteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BBA2A827B3200F91414 /* QuoteRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		52A33BA02A8268E500F91414 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52A33BA22A8268E600F91414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52A33BA52A8268E600F91414 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52A33BB02A826FE200F91414 /* WindowQuoteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WindowQuoteModel.xcdatamodel; sourceTree = "<group>"; };
+		52A33BB22A82720500F91414 /* WindowQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowQuote.swift; sourceTree = "<group>"; };
+		52A33BB62A82766B00F91414 /* QuotesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesProvider.swift; sourceTree = "<group>"; };
+		52A33BBA2A827B3200F91414 /* QuoteRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,14 @@
 		52A33B9D2A8268E500F91414 /* drapery */ = {
 			isa = PBXGroup;
 			children = (
+				52A33BB52A82763D00F91414 /* Provider */,
+				52A33BA42A8268E600F91414 /* Preview Content */,
 				52A33B9E2A8268E500F91414 /* draperyApp.swift */,
 				52A33BA02A8268E500F91414 /* ContentView.swift */,
 				52A33BA22A8268E600F91414 /* Assets.xcassets */,
-				52A33BA42A8268E600F91414 /* Preview Content */,
+				52A33BAF2A826FE200F91414 /* WindowQuoteModel.xcdatamodeld */,
+				52A33BB22A82720500F91414 /* WindowQuote.swift */,
+				52A33BBA2A827B3200F91414 /* QuoteRowView.swift */,
 			);
 			path = drapery;
 			sourceTree = "<group>";
@@ -65,6 +77,14 @@
 				52A33BA52A8268E600F91414 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52A33BB52A82763D00F91414 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				52A33BB62A82766B00F91414 /* QuotesProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A33BA12A8268E500F91414 /* ContentView.swift in Sources */,
+				52A33BB12A826FE200F91414 /* WindowQuoteModel.xcdatamodeld in Sources */,
+				52A33BBB2A827B3200F91414 /* QuoteRowView.swift in Sources */,
+				52A33BB32A82720500F91414 /* WindowQuote.swift in Sources */,
 				52A33B9F2A8268E500F91414 /* draperyApp.swift in Sources */,
+				52A33BB72A82766B00F91414 /* QuotesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +361,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		52A33BAF2A826FE200F91414 /* WindowQuoteModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				52A33BB02A826FE200F91414 /* WindowQuoteModel.xcdatamodel */,
+			);
+			currentVersion = 52A33BB02A826FE200F91414 /* WindowQuoteModel.xcdatamodel */;
+			path = WindowQuoteModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 52A33B932A8268E500F91414 /* Project object */;
 }
