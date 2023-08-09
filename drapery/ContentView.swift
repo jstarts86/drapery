@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isShowingNewWindowQuote = false
+    
+    
     var body: some View {
         NavigationStack {
             List {
@@ -19,6 +23,21 @@ struct ContentView: View {
                         .opacity(0)
                         WindowQuoteRowView()
                     }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        isShowingNewWindowQuote.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                            .font(.title2)
+                    }
+                }
+            }
+            .sheet(isPresented: $isShowingNewWindowQuote) {
+                NavigationStack {
+                    CreateWindowQuoteView()
                 }
             }
             .navigationTitle("Quotes")
