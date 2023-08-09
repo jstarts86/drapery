@@ -11,12 +11,18 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach((0...10), id: \.self) { item in
-                    QuoteRowView()
+                ForEach((0...10), id:\.self) { item in
+                    ZStack(alignment: .leading) {
+                        NavigationLink(destination: QuoteDetailView()) {
+                            EmptyView()
+                        }
+                        .opacity(0)
+                        QuoteRowView()
+                    }
                 }
             }
+            .navigationTitle("Quotes")
         }
-        .navigationTitle("Quotes")
     }
 }
 

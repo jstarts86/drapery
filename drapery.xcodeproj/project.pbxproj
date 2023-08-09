@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524797BB2A839F9900526609 /* QuoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524797BA2A839F9900526609 /* QuoteDetailView.swift */; };
 		52A33B9F2A8268E500F91414 /* draperyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33B9E2A8268E500F91414 /* draperyApp.swift */; };
 		52A33BA12A8268E500F91414 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BA02A8268E500F91414 /* ContentView.swift */; };
 		52A33BA32A8268E600F91414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A33BA22A8268E600F91414 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		524797BA2A839F9900526609 /* QuoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailView.swift; sourceTree = "<group>"; };
 		52A33B9B2A8268E500F91414 /* drapery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drapery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A33B9E2A8268E500F91414 /* draperyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draperyApp.swift; sourceTree = "<group>"; };
 		52A33BA02A8268E500F91414 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				52A33BAF2A826FE200F91414 /* WindowQuoteModel.xcdatamodeld */,
 				52A33BB22A82720500F91414 /* WindowQuote.swift */,
 				52A33BBA2A827B3200F91414 /* QuoteRowView.swift */,
+				524797BA2A839F9900526609 /* QuoteDetailView.swift */,
 			);
 			path = drapery;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A33BA12A8268E500F91414 /* ContentView.swift in Sources */,
+				524797BB2A839F9900526609 /* QuoteDetailView.swift in Sources */,
 				52A33BB12A826FE200F91414 /* WindowQuoteModel.xcdatamodeld in Sources */,
 				52A33BBB2A827B3200F91414 /* QuoteRowView.swift in Sources */,
 				52A33BB32A82720500F91414 /* WindowQuote.swift in Sources */,

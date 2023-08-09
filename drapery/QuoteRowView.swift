@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QuoteRowView: View {
     var body: some View {
-        VStack(alignment:.leading, spacing: 8) {
+        VStack(alignment:.leading, spacing: 6) {
             Text("Customer Name")
                 .font(.system(size:26,design: .rounded).bold())
             Text("Treatment")
@@ -22,7 +22,7 @@ struct QuoteRowView: View {
             Button {
                 
             } label: {
-                Image(systemName: "star")
+                Image(systemName: "checkmark.circle")
                     .font(.title3)
                     .symbolVariant(.fill)
                     .foregroundColor(.gray.opacity(0.3))
