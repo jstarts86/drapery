@@ -13,11 +13,11 @@ struct ContentView: View {
             List {
                 ForEach((0...10), id:\.self) { item in
                     ZStack(alignment: .leading) {
-                        NavigationLink(destination: QuoteDetailView()) {
+                        NavigationLink(destination: WindowQuoteDetailView()) {
                             EmptyView()
                         }
                         .opacity(0)
-                        QuoteRowView()
+                        WindowQuoteRowView()
                     }
                 }
             }

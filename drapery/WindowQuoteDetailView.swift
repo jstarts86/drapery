@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuoteDetailView: View {
+struct WindowQuoteDetailView: View {
     var body: some View {
         List {
             Section("General") {
@@ -110,8 +110,8 @@ struct QuoteDetailView: View {
     }
 }
 
-struct QuoteDetailView_Previews: PreviewProvider {
+struct WindowQuoteDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        QuoteDetailView()
+        WindowQuoteDetailView()
     }
 }

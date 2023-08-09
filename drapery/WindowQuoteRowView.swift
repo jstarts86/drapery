@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuoteRowView: View {
+struct WindowQuoteRowView: View {
     var body: some View {
         VStack(alignment:.leading, spacing: 6) {
             Text("Customer Name")
@@ -32,8 +32,8 @@ struct QuoteRowView: View {
     }
 }
 
-struct QuoteRowView_Previews: PreviewProvider {
+struct WindowQuoteRowView_Previews: PreviewProvider {
     static var previews: some View {
-        QuoteRowView()
+        WindowQuoteRowView()
     }
 }

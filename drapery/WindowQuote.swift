@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-final class Contact: NSManagedObject {
+final class WindowQuote: NSManagedObject {
     @NSManaged var quoteDate: Date
     @NSManaged var id: UUID
     @NSManaged var isCompleted: Bool

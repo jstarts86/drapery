@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		524797BB2A839F9900526609 /* QuoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524797BA2A839F9900526609 /* QuoteDetailView.swift */; };
+		524797BB2A839F9900526609 /* WindowQuoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524797BA2A839F9900526609 /* WindowQuoteDetailView.swift */; };
+		524797BE2A83C52D00526609 /* CreateWindowQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524797BD2A83C52D00526609 /* CreateWindowQuoteView.swift */; };
 		52A33B9F2A8268E500F91414 /* draperyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33B9E2A8268E500F91414 /* draperyApp.swift */; };
 		52A33BA12A8268E500F91414 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BA02A8268E500F91414 /* ContentView.swift */; };
 		52A33BA32A8268E600F91414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A33BA22A8268E600F91414 /* Assets.xcassets */; };
 		52A33BA62A8268E600F91414 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A33BA52A8268E600F91414 /* Preview Assets.xcassets */; };
-		52A33BB12A826FE200F91414 /* WindowQuoteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BAF2A826FE200F91414 /* WindowQuoteModel.xcdatamodeld */; };
+		52A33BB12A826FE200F91414 /* WindowQuoteDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BAF2A826FE200F91414 /* WindowQuoteDataModel.xcdatamodeld */; };
 		52A33BB32A82720500F91414 /* WindowQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BB22A82720500F91414 /* WindowQuote.swift */; };
 		52A33BB72A82766B00F91414 /* QuotesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BB62A82766B00F91414 /* QuotesProvider.swift */; };
-		52A33BBB2A827B3200F91414 /* QuoteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BBA2A827B3200F91414 /* QuoteRowView.swift */; };
+		52A33BBB2A827B3200F91414 /* WindowQuoteRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33BBA2A827B3200F91414 /* WindowQuoteRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		524797BA2A839F9900526609 /* QuoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailView.swift; sourceTree = "<group>"; };
+		524797BA2A839F9900526609 /* WindowQuoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowQuoteDetailView.swift; sourceTree = "<group>"; };
+		524797BD2A83C52D00526609 /* CreateWindowQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWindowQuoteView.swift; sourceTree = "<group>"; };
 		52A33B9B2A8268E500F91414 /* drapery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drapery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A33B9E2A8268E500F91414 /* draperyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draperyApp.swift; sourceTree = "<group>"; };
 		52A33BA02A8268E500F91414 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,7 +30,7 @@
 		52A33BB02A826FE200F91414 /* WindowQuoteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WindowQuoteModel.xcdatamodel; sourceTree = "<group>"; };
 		52A33BB22A82720500F91414 /* WindowQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowQuote.swift; sourceTree = "<group>"; };
 		52A33BB62A82766B00F91414 /* QuotesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesProvider.swift; sourceTree = "<group>"; };
-		52A33BBA2A827B3200F91414 /* QuoteRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRowView.swift; sourceTree = "<group>"; };
+		52A33BBA2A827B3200F91414 /* WindowQuoteRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowQuoteRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		524797BC2A83C4E700526609 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		52A33B922A8268E500F91414 = {
 			isa = PBXGroup;
 			children = (
@@ -61,15 +70,17 @@
 		52A33B9D2A8268E500F91414 /* drapery */ = {
 			isa = PBXGroup;
 			children = (
+				524797BC2A83C4E700526609 /* Model */,
 				52A33BB52A82763D00F91414 /* Provider */,
 				52A33BA42A8268E600F91414 /* Preview Content */,
 				52A33B9E2A8268E500F91414 /* draperyApp.swift */,
 				52A33BA02A8268E500F91414 /* ContentView.swift */,
 				52A33BA22A8268E600F91414 /* Assets.xcassets */,
-				52A33BAF2A826FE200F91414 /* WindowQuoteModel.xcdatamodeld */,
 				52A33BB22A82720500F91414 /* WindowQuote.swift */,
-				52A33BBA2A827B3200F91414 /* QuoteRowView.swift */,
-				524797BA2A839F9900526609 /* QuoteDetailView.swift */,
+				52A33BBA2A827B3200F91414 /* WindowQuoteRowView.swift */,
+				524797BA2A839F9900526609 /* WindowQuoteDetailView.swift */,
+				52A33BAF2A826FE200F91414 /* WindowQuoteDataModel.xcdatamodeld */,
+				524797BD2A83C52D00526609 /* CreateWindowQuoteView.swift */,
 			);
 			path = drapery;
 			sourceTree = "<group>";
@@ -161,10 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A33BA12A8268E500F91414 /* ContentView.swift in Sources */,
-				524797BB2A839F9900526609 /* QuoteDetailView.swift in Sources */,
-				52A33BB12A826FE200F91414 /* WindowQuoteModel.xcdatamodeld in Sources */,
-				52A33BBB2A827B3200F91414 /* QuoteRowView.swift in Sources */,
+				524797BB2A839F9900526609 /* WindowQuoteDetailView.swift in Sources */,
+				52A33BB12A826FE200F91414 /* WindowQuoteDataModel.xcdatamodeld in Sources */,
+				52A33BBB2A827B3200F91414 /* WindowQuoteRowView.swift in Sources */,
 				52A33BB32A82720500F91414 /* WindowQuote.swift in Sources */,
+				524797BE2A83C52D00526609 /* CreateWindowQuoteView.swift in Sources */,
 				52A33B9F2A8268E500F91414 /* draperyApp.swift in Sources */,
 				52A33BB72A82766B00F91414 /* QuotesProvider.swift in Sources */,
 			);
@@ -367,13 +379,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		52A33BAF2A826FE200F91414 /* WindowQuoteModel.xcdatamodeld */ = {
+		52A33BAF2A826FE200F91414 /* WindowQuoteDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				52A33BB02A826FE200F91414 /* WindowQuoteModel.xcdatamodel */,
 			);
 			currentVersion = 52A33BB02A826FE200F91414 /* WindowQuoteModel.xcdatamodel */;
-			path = WindowQuoteModel.xcdatamodeld;
+			path = WindowQuoteDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
