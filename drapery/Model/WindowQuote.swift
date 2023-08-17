@@ -9,18 +9,20 @@ import Foundation
 import CoreData
 
 final class WindowQuote: NSManagedObject {
-    @NSManaged var quoteDate: Date
+    @NSManaged var startDate: Date
     @NSManaged var id: UUID
     @NSManaged var isCompleted: Bool
     @NSManaged var accentFabric1: Double
     @NSManaged var accentFabric2: Double
+    @NSManaged var mainFabricYards: Double
+    @NSManaged var fringe: Decimal
     @NSManaged var comments: String
+    @NSManaged var miscellaneousPrice: Decimal
     @NSManaged var hardwarePrice: Decimal
     @NSManaged var installationPrice: Decimal
     @NSManaged var interliningPrice: Decimal
     @NSManaged var laborEtcPrice: Decimal
     @NSManaged var liningPrice: Decimal
-    @NSManaged var mainFabricYards: Double
     @NSManaged var totalPrice: Decimal
     @NSManaged var roomType: String
     @NSManaged var shopSupplyPrice: Decimal

@@ -12,6 +12,7 @@ struct draperyApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext, QuotesProvider.shared.viewContext)
         }
     }
 }

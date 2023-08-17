@@ -15,10 +15,11 @@
         <attribute name="laborEtcPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="liningPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="mainFabricYards" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="miscellaneousPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
-        <attribute name="quoteDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="roomType" optional="YES" attributeType="String"/>
         <attribute name="shopSupplyPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="totalPrice" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="treatments" optional="YES" attributeType="String"/>
     </entity>

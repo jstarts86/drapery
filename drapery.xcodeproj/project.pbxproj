@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5245918B2A8CF3EB0098F47F /* EditWindowQuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245918A2A8CF3EB0098F47F /* EditWindowQuoteViewModel.swift */; };
 		524797BB2A839F9900526609 /* WindowQuoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524797BA2A839F9900526609 /* WindowQuoteDetailView.swift */; };
 		524797BE2A83C52D00526609 /* CreateWindowQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524797BD2A83C52D00526609 /* CreateWindowQuoteView.swift */; };
 		52A33B9F2A8268E500F91414 /* draperyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A33B9E2A8268E500F91414 /* draperyApp.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5245918A2A8CF3EB0098F47F /* EditWindowQuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWindowQuoteViewModel.swift; sourceTree = "<group>"; };
 		524797BA2A839F9900526609 /* WindowQuoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowQuoteDetailView.swift; sourceTree = "<group>"; };
 		524797BD2A83C52D00526609 /* CreateWindowQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWindowQuoteView.swift; sourceTree = "<group>"; };
 		52A33B9B2A8268E500F91414 /* drapery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drapery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,9 +46,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		524591892A8CF1F70098F47F /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				524797BD2A83C52D00526609 /* CreateWindowQuoteView.swift */,
+				5245918A2A8CF3EB0098F47F /* EditWindowQuoteViewModel.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
 		524797BC2A83C4E700526609 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				524797BA2A839F9900526609 /* WindowQuoteDetailView.swift */,
+				52A33BA22A8268E600F91414 /* Assets.xcassets */,
+				52A33BBA2A827B3200F91414 /* WindowQuoteRowView.swift */,
+				52A33BB22A82720500F91414 /* WindowQuote.swift */,
+				52A33BAF2A826FE200F91414 /* WindowQuoteDataModel.xcdatamodeld */,
+				52A33BA02A8268E500F91414 /* ContentView.swift */,
+				52A33B9E2A8268E500F91414 /* draperyApp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -70,17 +88,10 @@
 		52A33B9D2A8268E500F91414 /* drapery */ = {
 			isa = PBXGroup;
 			children = (
+				524591892A8CF1F70098F47F /* Create */,
 				524797BC2A83C4E700526609 /* Model */,
 				52A33BB52A82763D00F91414 /* Provider */,
 				52A33BA42A8268E600F91414 /* Preview Content */,
-				52A33B9E2A8268E500F91414 /* draperyApp.swift */,
-				52A33BA02A8268E500F91414 /* ContentView.swift */,
-				52A33BA22A8268E600F91414 /* Assets.xcassets */,
-				52A33BB22A82720500F91414 /* WindowQuote.swift */,
-				52A33BBA2A827B3200F91414 /* WindowQuoteRowView.swift */,
-				524797BA2A839F9900526609 /* WindowQuoteDetailView.swift */,
-				52A33BAF2A826FE200F91414 /* WindowQuoteDataModel.xcdatamodeld */,
-				524797BD2A83C52D00526609 /* CreateWindowQuoteView.swift */,
 			);
 			path = drapery;
 			sourceTree = "<group>";
@@ -177,6 +188,7 @@
 				52A33BBB2A827B3200F91414 /* WindowQuoteRowView.swift in Sources */,
 				52A33BB32A82720500F91414 /* WindowQuote.swift in Sources */,
 				524797BE2A83C52D00526609 /* CreateWindowQuoteView.swift in Sources */,
+				5245918B2A8CF3EB0098F47F /* EditWindowQuoteViewModel.swift in Sources */,
 				52A33B9F2A8268E500F91414 /* draperyApp.swift in Sources */,
 				52A33BB72A82766B00F91414 /* QuotesProvider.swift in Sources */,
 			);

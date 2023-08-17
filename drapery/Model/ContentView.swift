@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State private var isShowingNewWindowQuote = false
     
-    
+    var provider = QuotesProvider.shared
     var body: some View {
         NavigationStack {
             List {
@@ -37,7 +37,7 @@ struct ContentView: View {
             }
             .sheet(isPresented: $isShowingNewWindowQuote) {
                 NavigationStack {
-                    CreateWindowQuoteView()
+                    CreateWindowQuoteView(vm: .init(provider: provider))
                 }
             }
             .navigationTitle("Quotes")
