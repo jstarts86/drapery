@@ -9,9 +9,11 @@ import SwiftUI
 
 struct CreateWindowQuoteView: View {
     @Environment(\.dismiss) private var dismiss
+    enum FocusedField {
+        case dec, double, int
+    }
     @ObservedObject var vm: EditWindowQuoteViewModel
-
-
+    @FocusState private var focusedField: FocusedField?
     var body: some View {
         List {
             Section("General") {
@@ -19,45 +21,59 @@ struct CreateWindowQuoteView: View {
                     .keyboardType(.namePhonePad)
                 TextField("Room Type", text: $vm.windowQuote.roomType)
                     .keyboardType(.default)
-                TextField("Treatement", text: $vm.windowQuote.treatements)
+                TextField("Treatement", text: $vm.windowQuote.treatments)
                     .keyboardType(.default)
                 TextField("Email", text: $vm.windowQuote.email)
                     .keyboardType(.emailAddress)
                 TextField("Phone Number", text: $vm.windowQuote.phoneNumber)
-                    .keyboardType(.phonePad)
-                DatePicker("Date", selection: $vm.windowQuote.startDate, displayedComponents: [.date])
+                    .focused($focusedField, equals: .dec)
+                    .numbersOnly($vm.windowQuote.phoneNumber)
+                DatePicker("Start Date", selection: $vm.windowQuote.startDate, displayedComponents: [.date])
                     .datePickerStyle(.compact)
                 
                 Toggle("Completed", isOn: $vm.windowQuote.isCompleted)
             }
             Section ("Measurments") {
                 TextField("Main Fabric Yard", text: $vm.windowQuote.mainFabricYards)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField,equals: .double)
+                    .numbersOnly($vm.windowQuote.mainFabricYards, includeDecimal: true)
                 TextField("Accent Fabric One", text: $vm.windowQuote.accentFabric1)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .double)
+                    .numbersOnly($vm.windowQuote.accentFabric1, includeDecimal: true)
                 TextField("Accent Fabric Two", text: $vm.windowQuote.accentFabric2)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .double )
+                    .numbersOnly($vm.windowQuote.accentFabric2, includeDecimal: true)
                 TextField("Fringe", text: $vm.windowQuote.fringe)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .double)
+                    .numbersOnly($vm.windowQuote.fringe, includeDecimal: true)
             }
             Section ("Costs") {
                 TextField("Miscellaneous", text: $vm.windowQuote.miscellaneousPrice)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .dec)
+                    .numbersOnly($vm.windowQuote.miscellaneousPrice, includeDecimal: true)
                 TextField("Shop Supply", text: $vm.windowQuote.shopSupplyPrice)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .dec)
+                    .numbersOnly($vm.windowQuote.shopSupplyPrice, includeDecimal: true)
                 TextField("Interlining", text:  $vm.windowQuote.interliningPrice)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .dec)
+                    .numbersOnly($vm.windowQuote.interliningPrice, includeDecimal: true)
                 TextField("Lining", text: $vm.windowQuote.liningPrice)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .dec)
+                    .numbersOnly($vm.windowQuote.liningPrice, includeDecimal: true)
                 TextField("Labor & Etc", text: $vm.windowQuote.laborEtcPrice)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .dec)
+                    .numbersOnly($vm.windowQuote.laborEtcPrice, includeDecimal: true)
                 TextField("Hardware", text: $vm.windowQuote.hardwarePrice)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .dec)
+                    .numbersOnly($vm.windowQuote.hardwarePrice, includeDecimal: true)
                 TextField("Installation", text: $vm.windowQuote.installationPrice)
-                    .keyboardType(.decimalPad)
+                    .focused($focusedField, equals: .dec)
+                    .numbersOnly($vm.windowQuote.installationPrice, includeDecimal: true)
             }
             Section("Comments") {
-                Text("12 For evils beyond number have surrounded me; My guilty deeds have overtaken me, so that I am not able to see; They are more numerous than the hairs of my head, And my heart has failed me. 13 Be pleased, Lord, to rescue me; Hurry, Lord, to help me. 14 May those be ashamed and humiliated together Who seek my life to destroy it; May those be turned back and dishonored Who delight in my hurt. (‭‭‭Psalms‬ ‭40‬‬:‭12‬-‭14‬ ‭NASB2020‬‬)")
+                TextField("",
+                     text: $vm.windowQuote.comments,
+                     axis: .vertical)
             }
         }
         .navigationTitle("Name Here")
@@ -78,6 +94,19 @@ struct CreateWindowQuoteView: View {
                     dismiss()
                 }
             }
+            ToolbarItem(placement: .keyboard) {
+                Spacer()
+            }
+            ToolbarItem(placement: .keyboard) {
+                Button {
+                    focusedField = nil
+                } label: {
+                    Image(systemName: "keyboard.chevron.compact.down")
+                }
+            }
+        }
+        .onAppear {
+            UITextField.appearance().clearButtonMode = .whileEditing
         }
     }
 }

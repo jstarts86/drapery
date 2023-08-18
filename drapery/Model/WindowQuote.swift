@@ -12,21 +12,21 @@ final class WindowQuote: NSManagedObject {
     @NSManaged var startDate: Date
     @NSManaged var id: UUID
     @NSManaged var isCompleted: Bool
-    @NSManaged var accentFabric1: Double
-    @NSManaged var accentFabric2: Double
-    @NSManaged var mainFabricYards: Double
-    @NSManaged var fringe: Decimal
+    @NSManaged var accentFabric1: String
+    @NSManaged var accentFabric2: String
+    @NSManaged var mainFabricYards: String
+    @NSManaged var fringe: String
     @NSManaged var comments: String
-    @NSManaged var miscellaneousPrice: Decimal
-    @NSManaged var hardwarePrice: Decimal
-    @NSManaged var installationPrice: Decimal
-    @NSManaged var interliningPrice: Decimal
-    @NSManaged var laborEtcPrice: Decimal
-    @NSManaged var liningPrice: Decimal
-    @NSManaged var totalPrice: Decimal
+    @NSManaged var miscellaneousPrice: String
+    @NSManaged var hardwarePrice: String
+    @NSManaged var installationPrice: String
+    @NSManaged var interliningPrice: String
+    @NSManaged var laborEtcPrice: String
+    @NSManaged var liningPrice: String
+    @NSManaged var totalPrice: String
     @NSManaged var roomType: String
-    @NSManaged var shopSupplyPrice: Decimal
-    @NSManaged var treatements: String
+    @NSManaged var shopSupplyPrice: String
+    @NSManaged var treatments: String
     @NSManaged var customerName: String
     @NSManaged var phoneNumber: String
     @NSManaged var email: String
